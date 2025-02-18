@@ -16,7 +16,7 @@
 [![ReadTheDocs](https://readthedocs.org/projects/ycms/badge/?version=latest)](https://ycms.readthedocs.io/en/latest/)
 
 # HospiTool
-Hospitals face the challenge of efficiently managing patient stays, medical records, bed allocations and patient data. Existing digital solutions are often complicated and not very intuitive. Although algorithms for automatic bed allocation already exist,
+Hospitals face the challenge of efficiently managing patient stays, medical records, bed allocations and patient data. Existing digital solutions are often complicated and not very intuitive. Bed allocation in particular is a complex undertaking due to the many factors that need to be taken into account. Although algorithms for automatic bed allocation already exist,
 an interface to hospital information systems to use them effectively has been missing until now. Our software offers a user-friendly solution that is specifically optimized for bed management to close this gap.
 
 ## Installation
@@ -30,6 +30,8 @@ git clone git@github.com:JonasDju/HospiTool.git
 cd HospiTool
 docker compose --profile dev up
 ```
+**Note:** Linux users who decide to use Docker Desktop, Podman, or similar solutions need to loosen the file access permissions for all files in the repository(!) by running `chmod -R 777 .` after switching into the `HospiTool` directory (after second command above). Otherwise, you will be confronted with permission errors during container startup. 
+
 Building and starting the container for the first time will take several minutes. Subsequent runs of the project will start much faster.
 While the container is running, the WebUI can be accessed via `http://localhost:8086`. Any changes made to the source code or templates will be visible in real time without stopping the container.
 The containers can be stopped using `Ctrl+C`. If you wish to reset the database, use `docker compose --profile dev down` after stopping the containers.
