@@ -30,7 +30,7 @@ git clone git@github.com:JonasDju/HospiTool.git
 cd HospiTool
 docker compose --profile dev up
 ```
-**Note:** Linux users who decide to use Docker Desktop, Podman, or similar solutions need to loosen the file access permissions for all files in the repository(!) by running `chmod -R 777 .` after switching into the `HospiTool` directory (after second command above). Otherwise, you will get permission errors during container startup. 
+**Note:** Linux users who decide to use Docker Desktop, Podman, or similar solutions need to loosen the file access permissions for all files in the repository(!) by running `chmod -R 777 .` after switching into the `HospiTool` directory (after second command above). Otherwise, you will be confronted with permission errors during container startup. 
 
 Building and starting the container for the first time will take several minutes. Subsequent runs of the project will start much faster.
 While the container is running, the WebUI can be accessed via `http://localhost:8086`. Any changes made to the source code or templates will be visible in real time without stopping the container.
